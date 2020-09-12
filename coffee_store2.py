@@ -1,12 +1,12 @@
 import autopep8
+
+
 def func_main():
-    """
-        ข้อมูลของเครื่องทำกาแฟ
-    """
+    # ข้อมูลของเครื่องทำกาแฟ
     print('#' * 120)
     for i in range(3):
         print('#' + (" " * 118) + "#")
-    print("#" + (' ' * 40) + 'The coffee machine has:' + (' ' * 55) + "#")
+    print("#" + (' ' * 40) + 'The coffee machine has:' + (' '*55) + "#")
     print("#" + (' ' * 40) + '400 of water' + (' ' * 66) + "#")
     print("#" + (' ' * 40) + '540 of milk' + (' ' * 67) + "#")
     print("#" + (' ' * 40) + '120 of coffee beans' + (' ' * 59) + "#")
@@ -15,26 +15,20 @@ def func_main():
     for i in range(3):
         print('#' + (" " * 118) + "#")
     print('#' * 120)
-    """
-        เลือกประเภทที่ต้องการทำรายการ
-    """
+    # เลือกประเภทที่ต้องการทำรายการ
     print('#' * 120)
     for i in range(3):
         print('#' + (" " * 118) + "#")
-    print("#" + (' ' * 40) + 'Write action (buy, fill, take):' + (' ' * 47) + "#") ###เลือก
+    print("#" + (' '*40) + 'Write action (buy, fill, take):' + (' '*47) + "#")
     for i in range(3):
         print('#' + (" " * 118) + "#")
     print('#' * 120)
-    """
-        ตัวแปรที่จะเลือกใช้สำหรับเงื่อนไข
-    """
+    # ตัวแปรที่จะเลือกใช้สำหรับเงื่อนไข
     f = 'fill'
     bb = 'buy'
     t = 'take'
     a = input()
-    """
-        เงื่อนไขการเรียกใช้ Function
-    """
+    # เงื่อนไขการเรียกใช้ Function
     if a == 'buy':
         func_buy()
     elif a == 'fill':
@@ -43,16 +37,11 @@ def func_main():
         func_take()
     input('Press Enter to continue...')
 
-    """
-        เงื่อนไข สำหรับเงื่อนไขการ ซื้อกาแฟ ( buy )
-    """
+
 def func_buy():
     print('What dod you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:')
     b = input()
-
-    """
-            เงื่อนไข สำหรับเงื่อนไขการ ซื้อกาแฟ ( Espresso )
-        """
+    # เงื่อนไข สำหรับเงื่อนไขการ ซื้อกาแฟ  Espresso
     if b == '1':
         print('#' * 120)
         for i in range(2):
@@ -64,13 +53,10 @@ def func_buy():
         print("#" + (' ' * 40) + '8 of disposable' + (' ' * 63) + "#")
         print("#" + (' ' * 40) + '554 of money' + (' ' * 66) + "#")
         for i in range(2):
-            print('#' + (" " * 118) + "#")
-        print('#' * 120)
-
-        """
-                   เงื่อนไข สำหรับเงื่อนไขการ ซื้อกาแฟ ( Latte )
-               """
+            print('#' + (" "*118) + "#")
+        print('#'*120)
     elif b == '2':
+        # เงื่อนไข สำหรับเงื่อนไขการ ซื้อกาแฟ Latte
         print('#' * 120)
         for i in range(2):
             print('#' + (" " * 118) + "#")
@@ -83,11 +69,8 @@ def func_buy():
         for i in range(2):
             print('#' + (" " * 118) + "#")
         print('#' * 120)
-
-        """
-                   เงื่อนไข สำหรับเงื่อนไขการ ซื้อกาแฟ ( Cappuccino )
-               """
     elif b == '3':
+        # เงื่อนไข สำหรับเงื่อนไขการ ซื้อกาแฟ Cappuciino
         print('#' * 120)
         for i in range(2):
             print('#' + (" " * 118) + "#")
@@ -103,10 +86,9 @@ def func_buy():
     else:
         print("ERROR")
 
-    """
-            Function สำหรับเงื่อนไขการ เติมส่วนประกอบ ( fill )
-        """
+
 def func_fill():
+    # Function สำหรับเงื่อนไขการ เติมส่วนประกอบ  fill
     water = 400
     milk = 540
     beans = 120
@@ -135,6 +117,7 @@ def func_fill():
 
 
 def func_take():
+    # Function take
     print('I gave you $550')
     print('#' * 120)
     for i in range(3):
