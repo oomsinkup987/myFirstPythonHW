@@ -1,6 +1,3 @@
-import autopep8
-
-
 def func_main():
     # ข้อมูลของเครื่องทำกาแฟ
     print('#' * 120)
