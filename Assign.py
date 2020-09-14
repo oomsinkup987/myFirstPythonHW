@@ -18,14 +18,12 @@ for i in oil_li:
         a1,a2 = len(a)/2 - 1, len(a)/2
     else:
         a1,a2 = len(a)/2, len(a)/2
+
     print("#"+" " * int(72/2 - a1) + a + " " * int(72/2 - a2)+"#")
     print("#" +" " * 78 + "#")
     print("#" +" " * 78 + "#")
 print("#"+" " * int(44/2) + "1. Litre to Money 2. Money to Litre" + " " * int(43/2)+"#")
 print("#"+" " *int(65/2)+"Enter 1 or 2:\0337" + " " * int(66/2) + "#",end="")
-print("\n"+ '#' * 80 + '\0338',end="")
+print("\n"+ '#' * 80 + '\0338',end="")      
 a = input()
-
-
-def money():
-    if i == 
+print('#' * 80)
