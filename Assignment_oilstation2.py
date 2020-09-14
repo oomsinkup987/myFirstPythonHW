@@ -1,10 +1,5 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 def func():
+    # แสดงข้อมูลราคาและชนิดน้ำมัน
     print("#"*50)
     for i in range(2):
         print("#"+(" "*48)+"#")
@@ -31,6 +26,7 @@ def func():
     for i in range(8):
         print("#"+(" "*110)+"#")
     print("#" + (" " * 25) +
+          # เลือกประเภทที่ต้องการคำนวณ
           'เลือกว่าจะคำนวณจากเงินเป็นลิตรพิม 1 หรือ จำนวณลิตรเป็นเงินพิม 2' +
           (" "*33) + "#")
     for i in range(8):
@@ -43,6 +39,7 @@ def func():
     d = 'GasoholE20'
     e = 'Gasohol95'
     f = 'Diesel'
+    # Function สำหรับการคำนวณจากเงินแปลงเป็นลิตร
     if t == 1:
         price_in = int(input("ใส่จำนวณเงิน: ").strip())
         oiltype = input("OilType: ").split(" ")
@@ -98,6 +95,7 @@ def func():
                     print("#"+(" "*110)+"#")
             else:
                 print('Error')
+    # Function สำหรับการคำนวณจากลิตรแปลงเป็นเงิน
     if t == 2:
         Oil_in = int(input("#"+(" "*15)+"ใส่จำนวณลิตร: ").strip())
         oiltype = input("OilType: ").split(" ")
@@ -158,5 +156,6 @@ def func():
     input(" Press Enter to continue...")
 
 
+# Function สำหรับการทำซ้ำใหม่
 while True:
     func()

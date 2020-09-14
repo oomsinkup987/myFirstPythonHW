@@ -1,7 +1,7 @@
-import json
-import xmltodict
+import json # import json เข้ามาใช้แปลงจาก Dict เป็น json
+import xmltodict # แปลง xml ให้เป็น Dict
 from suds.client import Client
-client = Client('https://www.pttor.com/OilPrice.asmx?WSDL')
+client = Client('https://www.pttor.com/OilPrice.asmx?WSDL')# เข้าไปอ่านไฟล์จาก Website
 OilPrice = client.service.CurrentOilPrice(Language='thai')
 OilPrice1 = xmltodict.parse(OilPrice)
 Price = eval(json.dumps(OilPrice1))
@@ -13,6 +13,7 @@ for oil in Price.get("PTTOR_DS").get("FUEL"):
 
 
 def func():
+    # แสดงข้อมูลราคาและชนิดน้ำมัน
     print("#"*50)
     for i in range(2):
         print("#"+(" "*48)+"#")
@@ -38,6 +39,7 @@ def func():
     print("#"*112)
     for i in range(8):
         print("#"+(" "*110)+"#")
+    # เลือกประเภทที่ต้องการคำนวณ
     print("#" + (" " * 25) +
           'เลือกว่าจะคำนวณจากเงินเป็นลิตรพิม 1 หรือ จำนวณลิตรเป็นเงินพิม 2' +
           (" "*33) + "#")
@@ -51,6 +53,7 @@ def func():
     d = 'GasoholE20'
     e = 'Gasohol95'
     f = 'Diesel'
+    # เงื่อนไข สำหรับการคำนวณจากเงินแปลงเป็นลิตร
     if t == 1:
         price_in = int(input("ใส่จำนวณเงิน: ").strip())
         oiltype = input("OilType: ").split(" ")
@@ -106,6 +109,7 @@ def func():
                     print("#"+(" "*110)+"#")
             else:
                 print('Error')
+    # เงื่อนไข สำหรับการคำนวณจากลิตรแปลงเป็นเงิน            
     if t == 2:
         Oil_in = int(input("#"+(" "*15)+"ใส่จำนวณลิตร: ").strip())
         oiltype = input("OilType: ").split(" ")
@@ -166,5 +170,6 @@ def func():
     input(" Press Enter to continue...")
 
 
+# loop สำหรับการทำซ้ำใหม่
 while True:
     func()
