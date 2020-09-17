@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter import ttk
-import requests as re
 from tkinter.ttk import Combobox
 from suds.client import Client
 import xml.etree.ElementTree as ET
@@ -53,6 +52,8 @@ button3 = tk.Button(frame2, text='Reset', font=(
 button3.pack(side=tk.TOP)
 
 # Function สำหรับปุ่ม Reset
+
+
 def clear():
     cbo_oil.set('')
     entry.delete(0, 'end')
@@ -63,6 +64,8 @@ def clear():
 prt = tk.StringVar()
 
 # Function การคำนวณ
+
+
 def func_Oil():
     cbo = str(cbo_oil.get())
     a = str(oiltype.get())
@@ -107,7 +110,8 @@ def func_Oil():
             price = int(entry.get()) * 21.1
             prt.set("Pay: %.2f" % price,)
 
-#Frame ที่สองสำหรับแสดงค่าที่คำนวณ และ แสดงข้อมูลที่ดึงมาจาก Website
+
+# Frame ที่สองสำหรับแสดงค่าที่คำนวณ และ แสดงข้อมูลที่ดึงมาจาก Website
 lower_frame = tk.Frame(root, bg='#80c1ff', bd=5)
 lower_frame.place(relx=0.67, rely=0.01, relwidth=0.6,
                   relheight=0.9, anchor='n')
@@ -116,7 +120,7 @@ label = tk.Label(lower_frame, font=('Courier', 18),
                  anchor='nw', justify='left')
 label.place(relwidth=1, relheight=1)
 
-#Label สำหรับแสดง ค่าที่คำนวณ
+# Label สำหรับแสดง ค่าที่คำนวณ
 f3_l2 = tk.Label(lower_frame, textvariable=prt)
 f3_l2.config(font=("", 24))
 f3_l2.pack()
@@ -128,7 +132,7 @@ for kirito in tree:
     for i in kirito:
         oil += i.text + " \t "
         li += oil + "\n"
-#Label สำหรับแสดงข้อมูลที่ดึงมาจาก Website
+# Label สำหรับแสดงข้อมูลที่ดึงมาจาก Website
 ol.set(li)
 pr3 = tk.Label(lower_frame, textvariable=ol)
 pr3.config(font=("", 14))
