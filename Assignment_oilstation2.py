@@ -1,38 +1,32 @@
+import subprocess as sp
 def func():
     # แสดงข้อมูลราคาและชนิดน้ำมัน
+    sp.call('clear', shell=True)
+    oil_li = [{"name": "Gasoline 95 ","price": 29.16},
+          {"name": "Gasoline 91 ","price": 25.30},
+          {"name": "Gassohol 91 ","price": 21.68},
+          {"name": "Gassohol E20","price": 20.20},
+          {"name": "Gassohol 95 ","price": 21.00},
+          {"name": "Gassohol 95 ","price": 21.10}]
+
     print("#"*80)
-    for i in range(2):
-        print("#"+(" "*78)+"#")
-    print("#"+(" "*27)+'Gasoline95 price 29.16'+(" "*29)+"#")
-    for i in range(2):
-        print("#"+(" "*78)+"#")
-    print("#"+(" "*27)+'Gasoline95 price 29.16'+(" "*29)+"#")
-    for i in range(2):
-        print("#"+(" "*78)+"#")
-    print("#"+(" "*27)+'Gasoline95 price 29.16'+(" "*29)+"#")
-    for i in range(2):
-        print("#"+(" "*78)+"#")
-    print("#"+(" "*27)+'Gasoline95 price 29.16'+(" "*29)+"#")
-    for i in range(2):
-        print("#"+(" "*78)+"#")
-    print("#"+(" "*27)+'Gasoline95 price 29.16'+(" "*29)+"#")
-    for i in range(2):
-        print("#"+(" "*78)+"#")
-    print("#"+(" "*27)+'Gasoline95 price 29.16'+(" "*29)+"#")
-    for i in range(2):
-        print("#"+(" "*78)+"#")
-    print("#"*80)
-    print("#"*80)
-    for i in range(8):
-        print("#"+(" "*78)+"#")
-    # เลือกประเภทที่ต้องการคำนวณ
-    print("#" + (" " * 10) +
-          'เลือกว่าจะคำนวณจากเงินเป็นลิตรพิม 1 หรือ จำนวณลิตรเป็นเงินพิม 2' +
-          (" "*16) + "#")
-    for i in range(8):
-        print("#"+(" "*78)+"#")
-    print("#"*80)
+    for t in range(3):
+        print("#" +" " * 78 + "#")
+    for i in oil_li:
+        a = "Oiltype: " + i["name"]+"\tprice: \t"+"%.2f"%(i["price"])
+        if (int(len(a)/2) != len(a)/2):
+            a1,a2 = len(a)/2 - 1, len(a)/2
+        else:
+            a1,a2 = len(a)/2, len(a)/2
+
+        print("#"+" " * int(72/2 - a1) + a + " " * int(72/2 - a2)+"#")
+        print("#" +" " * 78 + "#")
+        print("#" +" " * 78 + "#")
+    print("#"+" " * int(44/2) + "1. Litre to Money 2. Money to Litre" + " " * int(43/2)+"#")
+    print("#"+" " *int(56/2)+" \0337" + " " * int(99/2) + "#",end="")
+    print("\n"+ '#' * 80 + '\0338',end="")      
     t = int(input('เลือกประเภทที่ต้องการคำนวณ:'))
+    print('#' * 80)
     a = 'Gasoline95'
     b = 'Gasoline91'
     c = 'Gasohol91'
