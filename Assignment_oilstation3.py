@@ -23,6 +23,7 @@ def func():
 
 
     sp.run('', shell=True)
+    print("#"*80)
     for oil in Price.get("PTTOR_DS").get("FUEL"):
         if(oil.get("PRICE_DATE").split()[0].split("/")[2] == "2020"):
             op[oil.get("PRODUCT")] = oil.get("PRICE")
