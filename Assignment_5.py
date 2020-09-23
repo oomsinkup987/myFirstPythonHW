@@ -35,7 +35,7 @@ def func():
     print(("#"*int(w - 1)) + "\n")
     print("#"*int(w - 1))
     for y in oil_li:
-        a = "Oiltype: " + y["name"]+"\tprice: "+"%.2f" % (y["price"])
+        a = y["name"]+"price: "+"%.2f" % (y["price"])
         print("#" + (" " * int((w // 2.5))) + '\0337', end="")
         print(" " * int((w // 1.7)) + "#" + '\0338', end="")
         print(a)
@@ -52,37 +52,37 @@ def func():
     # วนลูปการทำงานค่าน้ำมัน
     if typ == 1:
         if f == 1:
-            x1(29.16)
+            func_1(29.16)
         else:
-            x2(29.16)
+            func_2(29.16)
     elif typ == 2:
         if f == 1:
-            x1(25.30)
+            func_1(25.30)
         else:
-            x2(25.30)
+            func_2(25.30)
     elif typ == 3:
         if f == 1:
-            x1(21.68)
+            func_1(21.68)
         else:
-            x2(21.68)
+            func_2(21.68)
     elif typ == 4:
         if f == 1:
-            x1(20.2)
+            func_1(20.2)
         else:
-            x2(20.2)
+            func_2(20.2)
     elif typ == 5:
         if f == 1:
-            x1(21.2)
+            func_1(21.2)
         else:
-            x2(21.2)
+            func_2(21.2)
     else:
         if f == 1:
-            x1(21.1)
+            func_1(21.1)
         else:
-            x2(21.1)
+            func_2(21.1)
 
 
-def x1(i):
+def func_1(i):
     print("#" * int(w - 1))
     print("#" + (" " * int((w // 2.5))) + '\0337', end="")
     print(" " * int((w // 1.7)) + "#" + '\0338', end="")
@@ -94,7 +94,7 @@ def x1(i):
     print("#"*int(w-1))
 
 
-def x2(i):
+def func_2(i):
     print("#"*int(w-1))
     print("#" + (" " * int((w//2.5))) + '\0337', end="")
     print(" " * int((w//1.7)) + "#" + '\0338', end="")
